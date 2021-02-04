@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+    springapp:
+      environment:
+      - MONGO_DB_HOSTNAME=mongodb
+      - MONGO_DB_USERNAME=springqadb
+      - MONGO_DB_PASSWORD=springappqa123
+
+    mongodb:
+      environment:
+      - MONGO_INITDB_ROOT_USERNAME=springdbqa
+      - MONGO_INITDB_ROOT_PASSWORD=springappqa123

@@ -25,3 +25,9 @@ services:
       restart: always
       networks:
       - springappnetwork
+    volumes: 
+     mongomount:
+     driver: local
+    networks: 
+     springappnetwork:
+     driver: bridge

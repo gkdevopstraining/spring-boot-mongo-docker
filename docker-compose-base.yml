@@ -4,6 +4,8 @@ services:
       image: whitewolfimages/spring-app-docker:imageversion
       restart: always
       container_name: springcont
+      port:
+      - 8080:8080
       working_dir: /opt/app
       networks:
       - springappnetwork

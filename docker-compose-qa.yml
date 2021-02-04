@@ -8,5 +8,5 @@ services:
 
     mongodb:
       environment:
-      - MONGO_INITDB_ROOT_USERNAME=springdbqa
+      - MONGO_INITDB_ROOT_USERNAME=springqadb
       - MONGO_INITDB_ROOT_PASSWORD=springappqa123

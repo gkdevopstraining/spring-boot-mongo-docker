@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+    springapp:
+      image: whitewolfimages/spring-boot-app:imageversion
+      restart: always
+      container_name: springcont
+      environment:
+      - MONGO_DB_HOSTNAME=mongodb
+      - MONGO_DB_USERNAME=springdb
+      - MONGO_DB_PASSWORD=springapp123
+      ports:
+        - 8080:8080
+      working_dir: /opt/app
+      networks:
+      - springappnetwork
+
+    mongodb:
+      image: mongo
+      container_name: mongodb
+      environment:
+      - MONGO_INITDB_ROOT_USERNAME=springdb
+      - MONGO_INITDB_ROOT_PASSWORD=springapp123
+      volumes:
+      - mongomount:/data/db
+      restart: always
+      networks:
+      - springappnetwork

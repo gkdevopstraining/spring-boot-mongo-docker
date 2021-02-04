@@ -1,7 +1,7 @@
 version: '3.1'
 services:
     springapp:
-      image: whitewolfimages/spring-boot-app:1.0
+      image: whitewolfimages/spring-boot-app:imageversion
       restart: always
       container_name: springcont
       working_dir: /opt/app
